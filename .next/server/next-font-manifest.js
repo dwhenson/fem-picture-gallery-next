@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/david.henson/Documents/FEM/picture-gallery/src/app/layout":["static/media/d5fafdc7bbd3315c-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
