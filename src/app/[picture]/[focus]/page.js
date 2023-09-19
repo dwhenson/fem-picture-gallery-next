@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { data } from "@/data/data.js";
 import importAll from "@/helpers/importAll";
 
 const images = importAll(require.context("/public/assets", true, /hero-large/));
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const title = data.find((picture) => picture.id === params.picture).name;
 
   return {
     title: `${title} - Image`,
     description: "Improving my Next.js skillz.",
-    robots: "",
   };
 }
 

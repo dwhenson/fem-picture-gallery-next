@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-m) 0;
+}
+
+.slideshow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--clr-neutral-200);
+  font-size: var(--step--1);
+  transition: color 200ms ease;
+}
+
+.slideshow:hover {
+  color: var(--clr-neutral-100);
+}

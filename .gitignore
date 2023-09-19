@@ -67,3 +67,6 @@ GitHub.sublime-settings
 ## NODE MODULES
 .ntvs_analysis.dat
 node_modules/
+
+## Next
+.next/

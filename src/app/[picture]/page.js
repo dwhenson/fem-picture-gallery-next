@@ -9,7 +9,7 @@ import importAll from "@/helpers/importAll";
 const images = importAll(require.context("/public/assets", true, /gallery/));
 const artists = importAll(require.context("/public/assets", true, /artist/));
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
   const title = data.find((picture) => picture.id === params.picture).name;
 
   return {
@@ -26,6 +26,7 @@ function PictureProfilePage({ params }) {
   return (
     <>
       <Nav />
+
       <main>
         <h2>{picture.name}</h2>
         <p>{picture.artist.name}</p>
@@ -47,15 +48,19 @@ function PictureProfilePage({ params }) {
           height={100}
           alt={picture.artist.name}
         />
+      </main>
+
+      <footer>
         <p>{picture.name}</p>
         <p>{picture.artist.name}</p>
+
         <Link href={data[index - 1]?.id ? data[index - 1].id : data[index].id}>
           <Image src={back} alt="back" />
         </Link>
         <Link href={data[index + 1]?.id ? data[index + 1].id : data[index].id}>
           <Image src={next} alt="next" />
         </Link>
-      </main>
+      </footer>
     </>
   );
 }

@@ -1,6 +1,0 @@
-{
-  "/robots.txt/route": "/robots.txt",
-  "/[picture]/page": "/[picture]",
-  "/[picture]/[focus]/page": "/[picture]/[focus]",
-  "/page": "/"
-}

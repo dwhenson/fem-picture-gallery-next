@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
-import { data } from "@/data/data.js";
 import importAll from "@/helpers/importAll";
+import { data } from "@/data/data.js";
+import styles from "./page.module.css";
 
 const images = importAll(require.context("/public/assets", true, /thumbnail/));
 for (let index = 0; index < images.length; index++) {
@@ -12,20 +13,19 @@ for (let index = 0; index < images.length; index++) {
 export const metadata = {
   title: "Home",
   description: "Improving my Next.js skillz.",
-  robots: "",
 };
 
 export default function App() {
   return (
     <>
-      <Nav />
+      <header>
+        <Nav />
+      </header>
       <main>
-        <ul>
+        <ul role="list" className={`stack ${styles.masonry}`}>
           {data.map((picture, index) => (
             <li key={index}>
-              <Link href={picture.id}>
-                <h2>{picture.name}</h2>
-                <h2>{picture.artist.name}</h2>
+              <Link href={picture.id} className={styles.picture}>
                 <Image
                   key={index}
                   src={images[index].default.src}
@@ -34,6 +34,10 @@ export default function App() {
                   alt={picture.name}
                   priority={true}
                 />
+                <div className={`stack ${styles.text}`}>
+                  <h2>{picture.name}</h2>
+                  <h3>{picture.artist.name}</h3>
+                </div>
               </Link>
             </li>
           ))}
