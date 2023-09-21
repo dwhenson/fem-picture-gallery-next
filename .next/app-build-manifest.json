@@ -17,6 +17,11 @@
       "static/chunks/main-app.js",
       "static/css/app/[picture]/page.css",
       "static/chunks/app/[picture]/page.js"
+    ],
+    "/[picture]/[focus]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[picture]/[focus]/page.js"
     ]
   }
 }

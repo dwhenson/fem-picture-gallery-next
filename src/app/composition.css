@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns:
     minmax(1rem, 1fr)
-    minmax(320px, 1000px)
+    minmax(320px, 1440px)
     minmax(1rem, 1fr);
+  grid-template-rows: auto 1fr auto;
 }
 
 .place-content > * {

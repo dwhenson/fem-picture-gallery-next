@@ -1,0 +1,2 @@
+- Footer styles
+- Picture page layout
