@@ -46,7 +46,6 @@ function PictureProfilePage({ params }) {
           <div className={`stack ${styles.titles}`}>
             <h1 style={{ color: "var(--clr-neutral-100)" }}>{picture.name}</h1>
             <p>{picture.artist.name}</p>
-          </div>
           <Image
             src={artists[index].default.src}
             width={100}
@@ -54,6 +53,7 @@ function PictureProfilePage({ params }) {
             alt={picture.artist.name}
             className={styles.artistImage}
           />
+          </div>
         </div>
         <div className={styles.contentSection}>
           <p className={styles.year}>{picture.year}</p>

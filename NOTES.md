@@ -1,2 +1,2 @@
-- Footer styles
-- Picture page layout
+- Footer border
+- Home page shadows

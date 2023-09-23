@@ -19,14 +19,33 @@ function PictureFocus({ params }) {
   const index = data.findIndex((picture) => picture.id === params.picture);
 
   return (
-    <main>
-      <Link href={`/${params.picture}`}>Close</Link>
+    <main
+      style={{
+        backgroundColor: "var(--clr-neutral-100)",
+        width: "100vw",
+        marginLeft: "calc(50% - 50vw)",
+      }}
+    >
+      <Link
+        href={`/${params.picture}`}
+        style={{
+          display: "block",
+          color: "var(--clr-neutral-500)",
+          padding: "var(--space-m)",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          textAlign: "right",
+        }}
+      >
+        Close
+      </Link>
       <Image
         src={images[index].default.src}
         width={images[index].default.width}
         height={images[index].default.height}
         alt={picture.name}
         priority={true}
+        style={{ marginLeft: "auto", marginRight: "auto" }}
       />
     </main>
   );
